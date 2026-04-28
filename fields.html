@@ -29,18 +29,22 @@
             font-weight: bold; 
         }
         nav a:hover { color: #e6d5b8; }
-        .section { padding: 40px 20px; max-width: 1280px; margin: 0 auto; }
+        .section { padding: 60px 20px; max-width: 1280px; margin: 0 auto; }
+        .intro { max-width: 900px; margin: 0 auto 60px; text-align: center; font-size: 1.15em; }
         .gallery { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
             gap: 30px; 
-            margin-top: 20px; 
+            margin-top: 40px; 
         }
         .gallery-item { 
             border: 1px solid #ddd; 
             overflow: hidden; 
-            background: white; 
+            cursor: pointer; 
+            transition: transform 0.3s; 
+            background: white;
         }
+        .gallery-item:hover { transform: scale(1.03); }
         .gallery-item img { width: 100%; height: auto; display: block; }
         .caption { padding: 12px; text-align: center; font-weight: bold; }
     </style>
@@ -60,7 +64,9 @@
     </nav>
 
     <div class="section">
-        <p>These works explore the vastness of open fields, the drama of changing skies, and the quiet strength found in the land.</p>
+        <div class="intro">
+            <p>These works explore the vastness of open fields, the drama of changing skies, and the quiet strength found in the land.</p>
+        </div>
 
         <div class="gallery">
             <div class="gallery-item">
