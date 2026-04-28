@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fields & Horizons | Nature-Inspired Visions</title>
-       <!-- Force refresh - 4/28/2026 -->
     <style>
         body { font-family: Arial, sans-serif; margin: 0; background: #f8f5f0; color: #333; line-height: 1.6; }
         header { 
             background: linear-gradient(to bottom, #2c2115 0%, #5c4a2e 45%, #a38b5e 100%); 
             color: white; 
             text-align: center; 
-            padding: 80px 20px 60px; 
+            padding: 70px 20px 50px; 
         }
-        h1 { margin: 0; font-size: 3em; }
-        p.tagline { font-size: 1.4em; margin: 15px 0 0; }
+        h1 { margin: 0; font-size: 2.8em; }
         nav { 
             background: #2c2115; 
             padding: 15px 0; 
@@ -32,12 +30,11 @@
         }
         nav a:hover { color: #e6d5b8; }
         .section { padding: 60px 20px; max-width: 1280px; margin: 0 auto; }
-        .intro { max-width: 900px; margin: 0 auto 60px; text-align: center; font-size: 1.15em; }
+        .intro { max-width: 800px; margin: 0 auto 50px; text-align: center; font-size: 1.1em; }
         .gallery { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
             gap: 30px; 
-            margin-top: 40px; 
         }
         .painting { 
             background: white; 
@@ -50,16 +47,6 @@
         .painting:hover { transform: scale(1.03); }
         .painting img { width: 100%; height: auto; display: block; }
         .caption { padding: 12px; text-align: center; font-weight: bold; }
-        .studio-feature { 
-            margin: 40px 0; 
-            text-align: center; 
-        }
-        .studio-feature img { 
-            max-width: 100%; 
-            height: auto; 
-            border-radius: 8px; 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
-        }
         .lightbox { 
             display: none; 
             position: fixed; 
@@ -86,7 +73,7 @@
 
     <header>
         <h1>Nature-Inspired Visions</h1>
-        <p class="tagline">Paintings by James P Corp</p>
+        <p style="font-size:1.3em; margin-top:10px;">Paintings by James P Corp</p>
     </header>
 
     <nav>
@@ -103,14 +90,23 @@
     <div class="section">
         <div class="intro">
             <h2>Fields & Horizons</h2>
-            <p>These works explore the vastness of open fields, the drama of changing skies, and the quiet strength found in the land. Each piece captures a moment where earth meets sky — sometimes peaceful, sometimes powerful.</p>
+            <p>Expansive landscapes and open skies rendered in acrylic. These works reflect the vastness, rhythm, and quiet drama of the natural world.</p>
         </div>
 
         <div class="gallery">
+            <!-- Meadow Mist added here -->
             <div class="painting" onclick="openLightbox(this)" data-title="Meadow Mist" data-size="24×36" data-year="2026" data-avail="Not currently available">
                 <img src="meadow-mist.webp" alt="Meadow Mist">
                 <div class="caption">Meadow Mist</div>
             </div>
+
+            <!-- Your other existing paintings -->
+            <div class="painting" onclick="openLightbox(this)" data-title="Memory of the Meadow" data-size="60×48" data-year="2025" data-avail="Available">
+                <img src="Memory-of-the-Meadow.webp" alt="Memory of the Meadow">
+                <div class="caption">Memory of the Meadow</div>
+            </div>
+
+            <!-- Add the rest of your paintings here if you want them all -->
         </div>
     </div>
 
