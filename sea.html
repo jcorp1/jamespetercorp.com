@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call of the Sea | Nature-Inspired Visions</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f8f5f0; color: #333; line-height: 1.6; }
+        header { 
+            background: linear-gradient(to bottom, #2c2115 0%, #5c4a2e 45%, #a38b5e 100%); 
+            color: white; 
+            text-align: center; 
+            padding: 80px 20px 60px; 
+        }
+        h1 { margin: 0; font-size: 3em; }
+        p.tagline { font-size: 1.4em; margin: 15px 0 0; }
+        nav { 
+            background: #2c2115; 
+            padding: 15px 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+            text-align: center; 
+            font-size: 1.1em; 
+        }
+        nav a { 
+            color: white; 
+            margin: 0 18px; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+        nav a:hover { color: #e6d5b8; }
+        .section { padding: 60px 20px; max-width: 1280px; margin: 0 auto; }
+        .intro { max-width: 900px; margin: 0 auto 60px; text-align: center; font-size: 1.15em; }
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
+            gap: 30px; 
+            margin-top: 40px; 
+        }
+        .painting { 
+            background: white; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+            cursor: pointer; 
+            transition: transform 0.3s; 
+        }
+        .painting:hover { transform: scale(1.03); }
+        .painting img { width: 100%; height: auto; display: block; }
+        .caption { padding: 12px; text-align: center; font-weight: bold; }
+        .lightbox { 
+            display: none; 
+            position: fixed; 
+            top: 0; left: 0; 
+            width: 100%; height: 100%; 
+            background: rgba(0,0,0,0.9); 
+            z-index: 1000; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .lightbox-content { 
+            max-width: 90%; 
+            max-height: 90%; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            position: relative; 
+        }
+        .lightbox img { max-width: 100%; max-height: 80vh; }
+        .close { position: absolute; top: 10px; right: 20px; font-size: 30px; cursor: pointer; color: #333; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nature-Inspired Visions</h1>
+        <p class="tagline">Paintings by James P Corp</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="florals.html">Florals & Pollinators</a>
+        <a href="radiant.html">Radiant Layers</a>
+        <a href="fields.html">Fields & Horizons</a>
+        <a href="sea.html">Call of the Sea</a>
+        <a href="bio.html">Bio</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="section">
+        <div class="intro">
+            <h2>Call of the Sea</h2>
+            <p>A personal series meditating on endurance, persistence, and the pull of the water. Inspired by a lifetime near the sea and small boats, these paintings explore facing the unknown with resilience and wonder.</p>
+        </div>
+
+        <div class="gallery">
+            <div class="painting" onclick="openLightbox(this)" data-title="The Call Remains" data-size="24×36" data-year="2026" data-avail="Available">
+                <img src="The-Call-Remains.webp" alt="The Call Remains">
+                <div class="caption">The Call Remains</div>
+            </div>
+            <div class="painting" onclick="openLightbox(this)" data-title="Final Passage" data-size="52×34" data-year="2026" data-avail="Available">
+                <img src="Final-Passage.webp" alt="Final Passage">
+                <div class="caption">Final Passage</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox with full info -->
+    <div id="lightbox" class="lightbox" onclick="if(event.target === this) closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopImmediatePropagation()">
+            <span class="close" onclick="closeLightbox()">×</span>
+            <img id="lightbox-image" src="" alt="">
+            <div id="lightbox-info" style="margin-top:15px; text-align:center; font-size:1.05em;"></div>
+        </div>
+    </div>
+
+    <script>
+        function openLightbox(el) {
+            const img = el.querySelector('img').src;
+            const title = el.getAttribute('data-title');
+            const size = el.getAttribute('data-size');
+            const year = el.getAttribute('data-year');
+            const avail = el.getAttribute('data-avail');
+            document.getElementById('lightbox-image').src = img;
+            document.getElementById('lightbox-info').innerHTML = 
+                `<strong>${title}</strong><br>` +
+                `${size}" (${year}, ${avail})`;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
