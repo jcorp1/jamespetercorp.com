@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fields & Horizons | Nature-Inspired Visions</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f8f5f0; color: #333; line-height: 1.6; }
+        * { box-sizing: border-box; }
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background: #f8f5f0; 
+            color: #333; 
+            line-height: 1.6; 
+        }
         header { 
             background: linear-gradient(to bottom, #2c2115 0%, #5c4a2e 45%, #a38b5e 100%); 
             color: white; 
@@ -28,9 +35,7 @@
             text-decoration: none; 
             font-weight: bold; 
         }
-        nav a:hover { color: #e6d5b8; }
         .section { padding: 60px 20px; max-width: 1280px; margin: 0 auto; }
-        .intro { max-width: 900px; margin: 0 auto 60px; text-align: center; font-size: 1.15em; }
         .gallery { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
@@ -38,15 +43,22 @@
             margin-top: 40px; 
         }
         .gallery-item { 
-            border: 1px solid #ddd; 
+            border: 2px solid #ddd; 
             overflow: hidden; 
-            cursor: pointer; 
-            transition: transform 0.3s; 
-            background: white;
+            background: white; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
         }
-        .gallery-item:hover { transform: scale(1.03); }
-        .gallery-item img { width: 100%; height: auto; display: block; }
-        .caption { padding: 12px; text-align: center; font-weight: bold; }
+        .gallery-item img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+        }
+        .caption { 
+            padding: 15px; 
+            text-align: center; 
+            font-weight: bold; 
+            font-size: 1.1em; 
+        }
     </style>
 </head>
 <body>
@@ -64,9 +76,7 @@
     </nav>
 
     <div class="section">
-        <div class="intro">
-            <p>These works explore the vastness of open fields, the drama of changing skies, and the quiet strength found in the land.</p>
-        </div>
+        <p>These works explore the vastness of open fields, the drama of changing skies, and the quiet strength found in the land.</p>
 
         <div class="gallery">
             <div class="gallery-item">
